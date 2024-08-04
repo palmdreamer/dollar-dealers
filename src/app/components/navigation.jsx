@@ -26,6 +26,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import logo from "../../../public/dd-logo.jpg";
 
+import Link from "next/link";
 import Image from "next/image";
 
 const user = {
@@ -35,10 +36,17 @@ const user = {
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 };
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  {
+    name: "Buy",
+    href: "http://www.ebay.com.au/usr/dollardealers479",
+    current: false,
+    target: "_blank",
+  },
+  { name: "Sell", href: "/sell", current: false },
+  { name: "Loan", href: "/loan", current: false },
+  { name: "Contact", href: "/contact", current: false },
+  { name: "About Us", href: "about-us", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -57,7 +65,9 @@ export default function Navigation() {
         <div className="relative flex h-16 justify-between">
           <div className="relative z-10 flex px-2 lg:px-0">
             <div className="flex flex-shrink-0 items-center">
-              <Image alt="Your Company" src={logo} className="h-8 w-auto" />
+              <Link href="/">
+                <Image alt="Your Company" src={logo} className="h-8 w-auto" />
+              </Link>
             </div>
           </div>
           <div className="relative z-0 flex flex-1 items-center justify-center px-2 sm:absolute sm:inset-0">
@@ -146,6 +156,7 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
+              target={item.name === "Buy" ? "_blank" : "_self"}
               aria-current={item.current ? "page" : undefined}
               className={classNames(
                 item.current
@@ -167,6 +178,7 @@ export default function Navigation() {
               key={item.name}
               as="a"
               href={item.href}
+              target={item.name === "Buy" ? "_blank" : "_self"}
               aria-current={item.current ? "page" : undefined}
               className={classNames(
                 item.current
