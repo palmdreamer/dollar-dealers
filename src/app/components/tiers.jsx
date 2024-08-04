@@ -69,7 +69,7 @@ export default function Tiers() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl sm:text-center">
-          {/* <h2 className="text-base font-semibold leading-7 text-indigo-600">
+          {/* <h2 className="text-base font-semibold leading-7 text-yellow-400">
             Welcome!
           </h2> */}
           <p className="mt-2 text-4xl italic font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -104,7 +104,7 @@ export default function Tiers() {
                 <a
                   href={tier.href}
                   aria-describedby={tier.id}
-                  className="mt-10 block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="mt-10 block rounded-md bg-yellow-400 px-3 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
                 >
                   Get Started
                 </a>
@@ -119,7 +119,7 @@ export default function Tiers() {
                     <li key={feature} className="flex gap-x-3">
                       <CheckCircleIcon
                         aria-hidden="true"
-                        className="h-6 w-5 flex-none text-indigo-600"
+                        className="h-6 w-5 flex-none text-yellow-400"
                       />
                       {feature}
                     </li>
