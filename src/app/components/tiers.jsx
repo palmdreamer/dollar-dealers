@@ -1,9 +1,4 @@
-import {
-  CheckCircleIcon,
-  CurrencyDollarIcon,
-  ShoppingBagIcon,
-  SparklesIcon,
-} from "@heroicons/react/20/solid";
+import { CurrencyDollarIcon, SparklesIcon } from "@heroicons/react/20/solid";
 
 import ebay from "../../../public/ebay-logo.jpg";
 
@@ -117,7 +112,7 @@ export default function Tiers() {
                 >
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex gap-x-3">
-                      <CheckCircleIcon
+                      <CurrencyDollarIcon
                         aria-hidden="true"
                         className="h-6 w-5 flex-none text-yellow-400"
                       />
