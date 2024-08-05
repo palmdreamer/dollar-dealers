@@ -1,7 +1,7 @@
 import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
+  CameraIcon,
+  CurrencyDollarIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/20/solid";
 
 export default function AboutSection() {
@@ -22,16 +22,16 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <p className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">
-            Deploy faster
+            Nice to meet you,
           </p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            A better workflow
+            Welcome to Dollar Dealers Coburg
           </h1>
           <p className="mt-6 text-xl leading-8 text-gray-700">
-            Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At
-            arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae
-            feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-            Eleifend egestas fringilla sapien.
+            Dollar Dealers opened it’s doors in COBURG in December 2015. We
+            started with just one operator with just a small amount of stock.
+            With steady growth & support from our valued customers we now have a
+            full shop with 4 staff to help.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-10 lg:max-w-none lg:grid-cols-12">
@@ -60,87 +60,80 @@ export default function AboutSection() {
             <figure className="border-l border-indigo-600 pl-8">
               <blockquote className="text-xl font-semibold leading-8 tracking-tight text-gray-900">
                 <p>
-                  “Vel ultricies morbi odio facilisi ultrices accumsan donec
-                  lacus purus. Lectus nibh ullamcorper ac dictum justo in
-                  euismod. Risus aenean ut elit massa. In amet aliquet eget
-                  cras. Sem volutpat enim tristique.”
+                  “I have purchased many things from the Mat & the guys at
+                  Dollar Dealers, they have always looked after me. Five Stars.”
                 </p>
               </blockquote>
               <figcaption className="mt-8 flex gap-x-4">
-                <img
-                  alt=""
-                  src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  className="mt-1 h-10 w-10 flex-none rounded-full bg-gray-50"
-                />
                 <div className="text-sm leading-6">
-                  <div className="font-semibold text-gray-900">
-                    Brenna Goyette
-                  </div>
-                  <div className="text-gray-600">@brenna</div>
+                  <div className="font-semibold text-gray-900">Joe Corso -</div>
+                  <div className="text-gray-600">@dollardealerscoburg</div>
                 </div>
               </figcaption>
             </figure>
           </div>
           <div className="max-w-xl text-base leading-7 text-gray-700 lg:col-span-7">
             <p>
-              Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus
-              enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor
-              praesent donec est. Odio penatibus risus viverra tellus varius sit
-              neque erat velit. Faucibus commodo massa rhoncus, volutpat.
-              Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-              sed turpis id.
+              We are a small shop with quality stock with a focus on turnover.
+              With over 18 years experience we offer proffesional service with
+              care & respect. We are proud to offer our services to the
+              community with straight forward conversations & understading that
+              everyones situation is unique to them.
             </p>
             <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
               <li className="flex gap-x-3">
-                <CloudArrowUpIcon
+                <CurrencyDollarIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
                 />
                 <span>
                   <strong className="font-semibold text-gray-900">
-                    Push to deploy.
+                    Buy goods of value.
                   </strong>{" "}
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
+                  At a pawn shop, valuable goods include jewellery, electronics,
+                  musical instruments, and quality power tools. We also accept
+                  luxury watches, designer handbags, and rare collectibles.
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <LockClosedIcon
+                <CameraIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
                 />
                 <span>
                   <strong className="font-semibold text-gray-900">
-                    SSL certificates.
+                    Loan goods of value.
                   </strong>{" "}
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo.
+                  Visit our Coburg store for a friendly, local service and
+                  expert appraisals. You can also browse and shop conveniently
+                  on our eBay store.
                 </span>
               </li>
               <li className="flex gap-x-3">
-                <ServerIcon
+                <ShoppingCartIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
                 />
                 <span>
                   <strong className="font-semibold text-gray-900">
-                    Database backups.
+                    Sell second hand goods with 3 months warranty & layby
+                    available.
                   </strong>{" "}
-                  Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-                  Et magna sit morbi lobortis.
+                  Enjoy peace of mind with our 3-month warranty on all
+                  second-hand purchases, and take advantage of our convenient
+                  layby options.
                 </span>
               </li>
             </ul>
-            <p className="mt-8">
+            {/* <p className="mt-8">
               Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
               odio id et. Id blandit molestie auctor fermentum dignissim. Lacus
               diam tincidunt ac cursus in vel. Mauris varius vulputate et
               ultrices hac adipiscing egestas. Iaculis convallis ac tempor et
               ut. Ac lorem vel integer orci.
-            </p>
+            </p> */}
             <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-              No server? No problem.
+              Need a loan? We help clients with that.
             </h2>
             <p className="mt-6">
               Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam
