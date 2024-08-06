@@ -1,7 +1,9 @@
-// components/Login.js
+"use client";
+
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from "../firebaseConfig";
+
+import app from "@/lib/firebase";
 
 const auth = getAuth(app);
 
