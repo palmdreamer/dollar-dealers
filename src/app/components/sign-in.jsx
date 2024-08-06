@@ -1,28 +1,27 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+// components/Login.js
+import { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from "../firebaseConfig";
+
+const auth = getAuth(app);
+
 export default function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // Redirect or perform other actions after successful login
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div className="flex min-h-full flex-1 items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-sm space-y-10">
           <div>
@@ -35,7 +34,7 @@ export default function SignIn() {
               Sign in to your account
             </h2>
           </div>
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="relative -space-y-px rounded-md shadow-sm">
               <div className="pointer-events-none absolute inset-0 z-10 rounded-md ring-1 ring-inset ring-gray-300" />
               <div>
@@ -49,6 +48,8 @@ export default function SignIn() {
                   required
                   placeholder="Email address"
                   autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -63,6 +64,8 @@ export default function SignIn() {
                   required
                   placeholder="Password"
                   autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -93,6 +96,8 @@ export default function SignIn() {
                 </a>
               </div>
             </div>
+
+            {error && <p className="text-sm text-red-600">{error}</p>}
 
             <div>
               <button
