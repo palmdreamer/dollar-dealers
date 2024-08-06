@@ -19,6 +19,11 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import { getAuth } from "firebase/auth";
+import app from "@/lib/firebase";
+
+const auth = getAuth(app);
+
 import logo from "../../../public/dd-logo.jpg";
 
 import Image from "next/image";
@@ -40,6 +45,14 @@ const teams = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
+const signOut = async () => {
+  try {
+    await auth.signOut(); // Assuming `auth` is your Firebase Auth instance
+  } catch (error) {
+    console.error("Error signing out:", error);
+  }
+};
 
 export default function Admin() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -197,20 +210,13 @@ export default function Admin() {
                   </ul>
                 </li>
 
-                <li className="-mx-6 mt-auto">
-                  <a
-                    href="#"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
-                  >
-                    <img
-                      alt=""
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      className="h-8 w-8 rounded-full bg-gray-50"
-                    />
-                    <span className="sr-only">Your profile</span>
-                    <span aria-hidden="true">Tom Cook</span>
-                  </a>
-                </li>
+                <button
+                  type="button"
+                  onClick={signOut} // Call signOut function on click
+                  className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
+                >
+                  Sign Out
+                </button>
               </ul>
             </nav>
           </div>
@@ -228,6 +234,7 @@ export default function Admin() {
           <div className="flex-1 text-sm font-semibold leading-6 text-gray-900">
             Dashboard
           </div>
+
           <a href="#">
             <span className="sr-only">Your profile</span>
             <img
