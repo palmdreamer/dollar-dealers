@@ -1,10 +1,27 @@
+"use client";
 import {
   CameraIcon,
   CurrencyDollarIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/20/solid";
 
+import { useState } from "react";
+
+import { useRouter } from "next/navigation";
+
 export default function AboutSection() {
+  const [clickCount, setClickCount] = useState(0);
+  const router = useRouter();
+
+  const handleCurrencyDollarIconClick = () => {
+    setClickCount((prevCount) => {
+      const newCount = prevCount + 1;
+      if (newCount === 3) {
+        router.push("/login");
+      }
+      return newCount;
+    });
+  };
   return (
     <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
       <div
@@ -85,6 +102,7 @@ export default function AboutSection() {
                 <CurrencyDollarIcon
                   aria-hidden="true"
                   className="mt-1 h-5 w-5 flex-none text-indigo-600"
+                  onClick={handleCurrencyDollarIconClick}
                 />
                 <span>
                   <strong className="font-semibold text-gray-900">
