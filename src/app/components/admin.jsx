@@ -19,6 +19,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
+import LoanConfig from "./loan-conifg";
+
 import { getAuth } from "firebase/auth";
 import app from "@/lib/firebase";
 
@@ -246,7 +248,9 @@ export default function Admin() {
         </div>
 
         <main className="py-10 lg:pl-72">
-          <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+          <div className="px-4 sm:px-6 lg:px-8">
+            <LoanConfig />
+          </div>
         </main>
       </div>
     </>
