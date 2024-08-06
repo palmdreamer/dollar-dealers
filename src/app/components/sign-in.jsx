@@ -7,6 +7,11 @@ import app from "@/lib/firebase";
 
 const auth = getAuth(app);
 
+import Image from "next/image";
+import Link from "next/link";
+
+import logo from "../../../public/dd-logo.jpg";
+
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,11 +32,13 @@ export default function SignIn() {
       <div className="flex min-h-full flex-1 items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
         <div className="w-full max-w-sm space-y-10">
           <div>
-            <img
-              alt="Your Company"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              className="mx-auto h-10 w-auto"
-            />
+            <Link href="/">
+              <Image
+                alt="Your Company"
+                src={logo}
+                className="mx-auto h-10 w-auto"
+              />
+            </Link>
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Sign in to your account
             </h2>
