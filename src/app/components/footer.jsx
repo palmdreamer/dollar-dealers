@@ -3,7 +3,7 @@ import logo from "../../../public/dd-logo.jpg";
 import Image from "next/image";
 
 const navigation = {
-  sitemap: [
+  navigation: [
     { name: "Home", href: "/" },
     {
       name: "Buy",
@@ -130,10 +130,10 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Sitemap
+                  Navigation
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.sitemap.map((item) => (
+                  {navigation.navigation.map((item) => (
                     <li key={item.name}>
                       <a
                         key={item.name}
@@ -206,7 +206,8 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-500">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Dollar Dealers, Inc. All rights
+            reserved.
           </p>
         </div>
       </div>
