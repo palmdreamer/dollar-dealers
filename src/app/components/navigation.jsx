@@ -111,22 +111,8 @@ export default function Navigation() {
             </DisclosureButton>
           </div>
           <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-            <button
-              type="button"
-              className="relative flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              <span className="absolute -inset-1.5" />
-
-              <CallButton />
-            </button>
-            <button
-              type="button"
-              className="relative flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              <span className="absolute -inset-1.5" />
-
-              <EnvelopeIcon aria-hidden="true" className="h-6 w-6" />
-            </button>
+            <CallButton />
+            <EmailButton />
           </div>
         </div>
         <nav
