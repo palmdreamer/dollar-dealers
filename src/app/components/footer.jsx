@@ -3,11 +3,18 @@ import logo from "../../../public/dd-logo.jpg";
 import Image from "next/image";
 
 const navigation = {
-  solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+  sitemap: [
+    { name: "Home", href: "/" },
+    {
+      name: "Buy",
+      href: "http://www.ebay.com.au/usr/dollardealers479",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    { name: "Sell", href: "/sell" },
+    { name: "Loan", href: "loan" },
+    { name: "Contact", href: "/contact" },
+    { name: "About Us", href: "/about-us" },
   ],
   support: [
     { name: "Pricing", href: "#" },
@@ -101,12 +108,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Image alt="Company name" src={logo} className="h-7" />
+            <Image alt="Company name" src={logo} className="mt-1" />
             <p className="text-sm leading-6 text-gray-600">
               Making the world a better place through constructing elegant
               hierarchies.
             </p>
-            <div className="flex space-x-6">
+            {/* <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
                   key={item.name}
@@ -117,19 +124,22 @@ export default function Footer() {
                   <item.icon aria-hidden="true" className="h-6 w-6" />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Solutions
+                  Sitemap
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.sitemap.map((item) => (
                     <li key={item.name}>
                       <a
+                        key={item.name}
                         href={item.href}
+                        target={item.target}
+                        rel={item.rel}
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         {item.name}
@@ -138,9 +148,9 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
+              {/* <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Support
+                  Sell
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
@@ -190,7 +200,7 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
