@@ -25,7 +25,7 @@ import { MagnifyingGlassIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import CallButton from "./call-button";
-import EmailButton from "./EmailButton";
+import EmailButton from "./email-button";
 
 import logo from "../../../public/dd-logo.jpg";
 
